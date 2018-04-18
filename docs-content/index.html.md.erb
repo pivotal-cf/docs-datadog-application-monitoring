@@ -18,11 +18,24 @@ enables PCF users to monitor the health and performance of their applications.
 
 ## <a id='overview'></a>Overview
 
+Datadog Application Monitoring for PCF is made up of two components:
+
+* DogstatsD
+* Trace Agent
+
+DogstatsD is the easiest way to get your custom application metrics into Datadog, a metrics
+aggregation service that implements the StatsD protocol and adds a few Datadog-specific extensions.
+To learn more, [check our our documentation](https://docs.datadoghq.com/guides/DogStatsD/).
+Additionally, we have [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/)
+you can check out to find one that is compatible with your application.
+
+Trace Agent is a service that collects application performance metrics from various sources and
+forwards them to Datadog. To learn more [check our documentation](https://docs.datadoghq.com/tracing/)
+
 Datadog Application Monitoring for PCF includes includes the following key features:
 
-* Trace Agent
-* DogstatsD
-* Puppy Agent
+* Application performance monitoring
+* Forwarding metrics to Datadog
 
 Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
 Datadog provides full-stack observability by combining infrastructure metrics and events with
