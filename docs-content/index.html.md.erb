@@ -1,115 +1,98 @@
 ---
-title: YOUR-PRODUCT-NAME (Beta)
+title: Datadog Application Monitoring for PCF (Beta)
 owner: Partners
 ---
+<style>
+    .note.warning {
+        background-color: #fdd;
+        border-color: #fbb
+    }
 
-<p class="note warning">
-<strong>WARNING! </strong>
-The PRODUCT-NAME for PCF tile is currently in beta and is intended for evaluation and test purposes only. 
-Do not use this product in a PCF production environment.
-</p>
+    .note.warning:before {
+        color: #f99;
+     }
+</style>
 
-**This topic begins with a brief description of what the product tile (e.g. Apigee Edge Service Broker for PCF) does, 
-whereas the Overview section below describes what the service itself (e.g. Apigee Edge) does. See below for an example.**
-
-This documentation describes the Apigee Edge Service Broker for Pivotal Cloud Foundry (PCF). The Apigee Edge Service 
-Broker for PCF enables developers to manage APIs for their PCF apps through the Apigee Edge management console.
-
-**Note**: This description will appear under **OVERVIEW** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
+This documentation describes Datadog Application Monitoring for Pivotal Cloud Foundry (PCF). Datadog Application Monitoring
+enables PCF users to monitor the health and performance of their applications.
 
 ## <a id='overview'></a>Overview
 
-**The overview describes the service that your product offers to PCF developers. 
-Make sure to overview the features of the integration.
-Don't focus only on the overview of your product that is being integrated.
-See below for an example.**
+Datadog Application Monitoring for PCF is made up of two components:
 
-The Apigee Edge Service Broker for PCF registers a service broker with PCF and exposes its service plans on the 
-Marketplace. Developers can then create service plan instances using Apps Manager or the Cloud Foundry Command 
-Line Interface (cf CLI) and bind them to their apps.
+* DogstatsD
+* Trace Agent
 
-Creating an Apigee Edge for PCF service instance and binding it to an app creates an Apigee Edge API proxy that 
-handles requests for the app. This lets developers use the Apigee Edge management console to manage API request 
-handling between clients and the app.
+DogstatsD is the easiest way to get your custom application metrics into Datadog, a metrics
+aggregation service that implements the StatsD protocol and adds a few Datadog-specific extensions.
+To learn more, [check our our documentation](https://docs.datadoghq.com/guides/DogStatsD/).
+Additionally, we have [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/)
+you can check out to find one that is compatible with your application.
 
-**Note**: This overview will appear under **OVERVIEW**, combined with the description above in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io).
+Trace Agent is a service that collects application performance metrics from various sources and
+forwards them to Datadog. To learn more [check our documentation](https://docs.datadoghq.com/tracing/)
 
-## <a id='features'></a>Key Features
+Datadog Application Monitoring for PCF includes includes the following key features:
 
-**Note**: This feature list will appear under **FEATURES** in the tile's listing on 
-[Pivotal Network](http://network.pivotal.io). 
-Make sure you list the key features of the tile (the integration). 
-We cannot accept a list of the key features of your product that we are integrating.
+* Application performance monitoring
+* Forwarding metrics to Datadog
 
-YOUR-PRODUCT-NAME includes the following key features:
-
-* Feature one
-* Feature two
-* Feature three
-
-
+Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
+Datadog provides full-stack observability by combining infrastructure metrics and events with
+application performance metrics and end-to-end tracing. With flexible graphs and dashboards,
+sophisticated alerting, and machine learning functionality for anomaly and outlier detection,
+the platform provides actionable insight into dynamic, modern environments. Datadog features
+200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
 
 ## <a id="snapshot"></a>Product Snapshot
 
-The following table provides version and version-support information about PRODUCT-NAME.
+The following table provides version and version-support information about the Datadog Application Monitoring for PCF.
 
 <table class="nice">
     <th>Element</th>
     <th>Details</th>
     <tr>
-        <td>Tile version</td>
-        <td>vYOUR-VERSION-NUMBER</td>
+        <td>Version</td>
+        <td>v1.0.0</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>YOUR-RELEASE-DATE (Ex: July 1, 2017)</td>
+        <td>Unreleased</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>vYOUR-SOFTWARE-COMPONENT-VERSION-NUMBER</td>
+        <td>v6.1.3</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>vYOUR-COMPATIBLE-OPS-MAN-VERSION (Ex. v1.11.x, v1.12.x, and v2.0.x)</td>
+        <td>v2.0.x</td>
     </tr>
     <tr>
-        <td>Compatible Pivotal Application Service (formerly known as Elastic Runtime) version(s)</td>
-        <td>vYOUR-COMPATIBLE-PIVOTAL-APPLICATION-SERVICE-VERSION (Ex. v1.11.x, v1.12.x, and v2.0.X)</td>
+        <td>Compatible Elastic Runtime version(s)</td>
+        <td>v2.0.x</td>
     </tr>
     <tr>
         <td>IaaS support</td>
-        <td>AWS?, Azure?, GCP?, OpenStack?, and vSphere?</td>
-    </tr>
-    <tr>
-        <td>IPsec support?</td>
-        <td>[Yes or No]</td>
+        <td>AWS, Azure, GCP, OpenStack, and vSphere</td>
     </tr>
 </table>
-* As of PCF v2.0, <em>Elastic Runtime</em> is renamed <em>Pivotal Application Service (PAS)</em>. 
 
 ## <a id="reqs"></a>Requirements
 
-**Provide any general or specific requirements, prerequisites, or dependencies here. 
-A general requirement might be something like, "An AppDynamics account." 
-A specific requirement might be something like, "Packaging Dependencies for Offline Buildpacks."**
+Datadog Application Monitoring for PCF has the following requirements:
 
-YOUR-PRODUCT-NAME has the following requirements:
++ You must have or create a [Datadog account](https://app.datadoghq.com/signup) before configuring the tile.
 
-+ PREREQUISITE-1
-
-+ PREREQUISITE-2
-
-## <a id="limitations"></a>Limitations
-
-**List any known limitations.**
++ You must generate a [Datadog API key](https://app.datadoghq.com/account/settings#api).
 
 ## <a id="feedback"></a>Feedback
 
-If you have a feature request, questions, or information about a bug, please email
-[Pivotal Cloud Foundry Feedback](mailto:cf-feedback@pivotal.io) list or send an email to YOUR-SUPPORT-EMAIL.
+Please provide any bugs, feature requests, or questions to the
+[Pivotal Cloud Foundry Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@datadoghq.com.
 
 ## <a id='license'></a>License
 
-**List any license information here.**
+Datadog Application Monitoring for PCF is released under the Apache License 2.0.
+
+To use Datadog Application Monitoring for PCF, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account.
+If you do not have a Datadog account, [sign up here](https://app.datadoghq.com/account/login?next=%2F).
