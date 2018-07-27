@@ -13,14 +13,12 @@ owner: Partners
      }
 </style>
 
-<p class='note warning'><strong>WARNING:</strong> The Datadog Application Monitoring for PCF tile
-is currently in beta and is intended for evaluation and test purposes only.
-Do not use this product in a PCF production environment.</p>
+<p class='note warning'><strong>WARNING:</strong> The Datadog Application Monitoring for PCF tile is currently in beta and is intended for evaluation and test purposes only. Do not use this product in a PCF production environment.</p>
 
-This documentation describes Datadog Application Monitoring for Pivotal Cloud Foundry (PCF). Datadog Application Monitoring
-enables PCF users to monitor the health and performance of their applications.
+This documentation describes Datadog Application Monitoring for Pivotal Cloud Foundry (PCF). Datadog Application Monitoring enables PCF users to monitor the health and performance of their applications.
 
-## <a id='overview'></a>Overview
+
+## <a id='overview'></a> Overview
 
 Datadog Application Monitoring for PCF is made up of three components:
 
@@ -28,34 +26,24 @@ Datadog Application Monitoring for PCF is made up of three components:
 * Trace Agent
 * Puppy Agent
 
-DogstatsD is the easiest way to get your custom application metrics into Datadog. It is a metrics
-aggregation service that implements the StatsD protocol and adds a few Datadog-specific extensions.
-For more information, see [our documentation](https://docs.datadoghq.com/guides/DogStatsD/).
-Additionally, we have [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/)
-you can reference to find one that is compatible with your application.
+DogstatsD is the easiest way to get your custom application metrics into Datadog. It is a metrics aggregation service that implements the StatsD protocol and adds a few Datadog-specific extensions. For more information, see [our documentation](https://docs.datadoghq.com/guides/DogStatsD/). Additionally, we have [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/) you can reference to find one that is compatible with your application.
 
-Trace Agent is a service that collects application traces from various sources and
-forwards them to Datadog. For more information, see [our documentation](https://docs.datadoghq.com/tracing/).
+Trace Agent is a service that collects application traces from various sources and forwards them to Datadog. For more information, see [our documentation](https://docs.datadoghq.com/tracing/).
 
-Puppy Agent is a smaller version of the [Datadog Agent](https://docs.datadoghq.com/agent/) that can forward metrics and logs
-to Datadog. For more information about log-collection, see [our documentation](https://docs.datadoghq.com/logs/).
-When enabled, all the logs from stdout and stderr are collect and forwarded by TCP to the Puppy Agent by default.
+Puppy Agent is a smaller version of the [Datadog Agent](https://docs.datadoghq.com/agent/) that can forward metrics and logs to Datadog. For more information about log-collection, see [our documentation](https://docs.datadoghq.com/logs/). When enabled, all the logs from stdout and stderr are collect and forwarded by TCP to the Puppy Agent by default.
 
-## <a id='key-features'></a>Key Features
+
+## <a id='key-features'></a> Key Features
 
 Datadog Application Monitoring for PCF includes the following key features:
 
 * Application performance monitoring
-* Metrics, logs and traces forwarding to Datadog
+* Metrics, logs, and traces forwarding to Datadog
 
-Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
-Datadog provides full-stack observability by combining infrastructure metrics and events with
-application performance metrics and end-to-end tracing. With flexible graphs and dashboards,
-sophisticated alerting, and machine learning functionality for anomaly and outlier detection,
-the platform provides actionable insight into dynamic, modern environments. Datadog features
-200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
+Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications. Datadog provides full-stack observability by combining infrastructure metrics and events with application performance metrics and end-to-end tracing. With flexible graphs and dashboards, sophisticated alerting, and machine learning functionality for anomaly and outlier detection, the platform provides actionable insight into dynamic, modern environments. Datadog features 200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
 
-## <a id="snapshot"></a>Product Snapshot
+
+## <a id="snapshot"></a> Product Snapshot
 
 The following table provides version and version-support information about the Datadog Application Monitoring for PCF.
 
@@ -89,21 +77,21 @@ The following table provides version and version-support information about the D
 </table>
 
 
-## <a id="reqs"></a>Requirements
+## <a id="reqs"></a> Requirements
 
 Datadog Application Monitoring for PCF has the following requirements:
 
 * You must have or create a [Datadog account](https://app.datadoghq.com/signup) before configuring the tile.
 * You must generate a [Datadog API key](https://app.datadoghq.com/account/settings#api).
 
-## <a id="feedback"></a>Feedback
 
-Please provide any bugs, feature requests, or questions to the
-[Pivotal Cloud Foundry Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@datadoghq.com.
+## <a id="feedback"></a> Feedback
 
-## <a id='license'></a>License
+Please provide any bugs, feature requests, or questions to the [Pivotal Cloud Foundry Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@datadoghq.com.
+
+
+## <a id='license'></a> License
 
 Datadog Application Monitoring for PCF is released under the Apache License 2.0.
 
-To use Datadog Application Monitoring for PCF, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account.
-If you do not have a Datadog account, sign up [here](https://app.datadoghq.com/account/login?next=%2F).
+To use Datadog Application Monitoring for PCF, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account. If you do not have a Datadog account, sign up [here](https://app.datadoghq.com/account/login?next=%2F).
