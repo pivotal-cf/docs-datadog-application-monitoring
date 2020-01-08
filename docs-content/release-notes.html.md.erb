@@ -5,6 +5,18 @@ owner: Partners
 
 These are release notes for Datadog Application Monitoring for Pivotal Platform.
 
+##<a id="ver"></a> 1.11.0
+
+**Release Date:** January 8, 2020
+
+Feature included in this release:
+
+* Upgrades the agent to 7.16.0. For more information, see the
+[datadog-agent 7.16.0](https://github.com/DataDog/datadog-agent/releases/tag/7.16.0) release in GitHub.
+* Standardize the environment variable naming for HTTP Proxy in log validation script,
+add DD_SKIP_LOGS_TEST variable to allow bypassing of log validation script, and strip the protocol on
+the provided proxy before passing to nc command. See [#70](https://github.com/DataDog/datadog-cloudfoundry-buildpack/pull/70)
+
 ##<a id="ver"></a> 1.10.0
 
 **Release Date:** November 6, 2019
