@@ -13,7 +13,7 @@ owner: Partners
      }
 </style>
 
-This documentation describes Datadog Application Monitoring for VMware Tanzu. Datadog Application Monitoring enables VMware Tanzu users to monitor the health and performance of their applications.
+Datadog is a monitoring and analytics platform that provides full-stack observability by combining infrastructure metrics and events with application performance metrics and end-to-end tracing. This documentation describes Datadog Application Monitoring for VMware Tanzu. Datadog Application Monitoring enables VMware Tanzu users to monitor the health and performance of their applications.
 
 
 ## <a id='overview'></a> Overview
@@ -22,13 +22,13 @@ Datadog Application Monitoring for VMware Tanzu is made up of three components:
 
 * DogStatsD
 * Trace Agent
-* Puppy Agent
+* Container Agent
 
-You can use DogStatsD to get your custom application metrics into Datadog. DogStatsD is a metrics aggregation service that implements the StatsD protocol and adds a few Datadog-specific extensions. For more information, see [the DogStatsD documentation](https://docs.datadoghq.com/guides/DogStatsD/). Additionally, Datadog provides [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/) you can use to find libraries compatible with your application.
+DogStatsD is used to get custom application metrics into Datadog. It is a metrics aggregation service that implements the [StatsD protocol](https://github.com/statsd/statsd) and adds a few Datadog-specific extensions. For more information, see [the DogStatsD documentation](https://docs.datadoghq.com/guides/DogStatsD/). Additionally, Datadog provides [a list of DogStatsD libraries](https://docs.datadoghq.com/libraries/) you can use to find libraries compatible with your application.
 
 The Trace Agent is a service that collects application traces from various sources and forwards them to Datadog. For more information, see [the tracing documentation](https://docs.datadoghq.com/tracing/).
 
-The Puppy Agent is a smaller version of the [Datadog Agent](https://docs.datadoghq.com/agent/) that can forward metrics and logs to Datadog. For more information about log collection, see [the logs documentation](https://docs.datadoghq.com/logs/). When enabled, the default behavior is for all logs from `stdout` and `stderr` to be collected and forwarded by TCP to the Puppy Agent.
+The Container Agent is a lightweight version of the [Datadog Agent](https://docs.datadoghq.com/agent/) that can forward metrics and logs to Datadog. For more information about log collection, see [the logs documentation](https://docs.datadoghq.com/logs/). When enabled, the default behavior is for all logs from `stdout` and `stderr` to be collected and forwarded by TCP to the Puppy Agent.
 
 
 ## <a id='key-features'></a> Key Features
@@ -37,8 +37,6 @@ Datadog Application Monitoring for VMware Tanzu includes the following key featu
 
 * Application performance monitoring
 * Metric, log, and trace forwarding to Datadog
-
-Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications. Datadog provides full-stack observability by combining infrastructure metrics and events with application performance metrics and end-to-end tracing.
 
 
 ## <a id="snapshot"></a> Product Snapshot
@@ -87,7 +85,7 @@ Datadog Application Monitoring for VMware Tanzu has the following requirements:
 
 ## <a id="feedback"></a> Feedback
 
-Please provide any bugs, feature requests, or questions to the [VMware Tanzu Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@datadoghq.com.
+Please provide any bugs, feature requests, or questions to [VMware Tanzu Feedback](mailto:pivotal-cf-feedback@pivotal.io) or open a [Support Ticket](https://docs.datadoghq.com/getting_started/support) with Datadog's support team.
 
 
 ## <a id='license'></a> License
